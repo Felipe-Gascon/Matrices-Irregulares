@@ -153,7 +153,8 @@ public class Ventana extends JFrame {
 				}
 				else
 				{
-					if(pos1!=pos2){
+					if(pos1!=pos2)
+					{
 						distTot=distancias[pos2-1][pos1];
 					}
 				}
@@ -163,7 +164,8 @@ public class Ventana extends JFrame {
 				if(pos1==pos2)
 				{
 					distTotal.setText("La Distancia Total entre "+a+" y "+b+" es de 0 Km");	
-				}else
+				}
+				else
 				{
 					String ciud=Integer.toString(distTot);
 					distTotal.setText("La Distancia Total entre "+a+" y "+b+" es de "+ciud+" Km");	
