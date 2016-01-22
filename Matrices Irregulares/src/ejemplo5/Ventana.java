@@ -104,7 +104,8 @@ public class Ventana extends JFrame {
 		distTotal.setColumns(10);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(71, 57, 105, 104);
+		scrollPane.setAutoscrolls(true);
+		scrollPane.setBounds(71, 57, 123, 130);
 		scrollPane.setToolTipText("a");
 		contentPane.add(scrollPane);
 
@@ -113,7 +114,8 @@ public class Ventana extends JFrame {
 		scrollPane.setViewportView(list);
 
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(273, 57, 105, 104);
+		scrollPane_1.setAutoscrolls(true);
+		scrollPane_1.setBounds(273, 57, 123, 130);
 		scrollPane_1.setToolTipText("b");
 		contentPane.add(scrollPane_1);
 
@@ -124,6 +126,7 @@ public class Ventana extends JFrame {
 		
 
 		JButton btnCalcula = new JButton("Calcula");
+		btnCalcula.setAutoscrolls(true);
 		btnCalcula.setBounds(181, 197, 89, 23);
 		contentPane.add(btnCalcula);
 		
