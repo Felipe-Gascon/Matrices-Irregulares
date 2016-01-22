@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 
 import javax.swing.JScrollPane;
 import javax.swing.JList;
+import javax.swing.ImageIcon;
 
 @SuppressWarnings("serial")
 public class Ventana extends JFrame {
@@ -82,7 +83,7 @@ public class Ventana extends JFrame {
 	public Ventana() {
 		setResizable(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 450, 300);
+		setBounds(100, 100, 510, 387);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -97,13 +98,13 @@ public class Ventana extends JFrame {
 		contentPane.add(lblCiudadDeDestino);
 
 		distTotal = new JTextField();
-		distTotal.setBounds(38, 184, 374, 20);
+		distTotal.setBounds(50, 250, 374, 20);
 		distTotal.setEditable(false);
 		contentPane.add(distTotal);
 		distTotal.setColumns(10);
 
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(66, 36, 105, 104);
+		scrollPane.setBounds(71, 57, 105, 104);
 		scrollPane.setToolTipText("a");
 		contentPane.add(scrollPane);
 
@@ -112,7 +113,7 @@ public class Ventana extends JFrame {
 		scrollPane.setViewportView(list);
 
 		JScrollPane scrollPane_1 = new JScrollPane();
-		scrollPane_1.setBounds(251, 36, 105, 104);
+		scrollPane_1.setBounds(273, 57, 105, 104);
 		scrollPane_1.setToolTipText("b");
 		contentPane.add(scrollPane_1);
 
@@ -123,8 +124,13 @@ public class Ventana extends JFrame {
 		
 
 		JButton btnCalcula = new JButton("Calcula");
-		btnCalcula.setBounds(156, 150, 89, 23);
+		btnCalcula.setBounds(181, 197, 89, 23);
 		contentPane.add(btnCalcula);
+		
+		JLabel lblM = new JLabel("");
+		lblM.setIcon(new ImageIcon(Ventana.class.getResource("/ejemplo5/mapa-espana.jpg")));
+		lblM.setBounds(0, 0, 509, 362);
+		contentPane.add(lblM);
 		btnCalcula.addActionListener(new ActionListener() 
 
 		{
