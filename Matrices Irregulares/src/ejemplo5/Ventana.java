@@ -97,7 +97,7 @@ public class Ventana extends JFrame {
 		contentPane.add(lblCiudadDeDestino);
 
 		distTotal = new JTextField();
-		distTotal.setBounds(66, 184, 308, 20);
+		distTotal.setBounds(38, 184, 374, 20);
 		distTotal.setEditable(false);
 		contentPane.add(distTotal);
 		distTotal.setColumns(10);
@@ -153,14 +153,21 @@ public class Ventana extends JFrame {
 				}
 				else
 				{
-					distTot=distancias[pos2-1][pos1];
-
+					if(pos1!=pos2){
+						distTot=distancias[pos2-1][pos1];
+					}
 				}
+				String a=(String) list.getSelectedValue();
+				String b=(String)listaDest.getSelectedValue();
 				
-				String ciud=Integer.toString(distTot);
-				
- 				distTotal.setText("La Distancia Total es de "+ciud+" Km");	
-
+				if(pos1==pos2)
+				{
+					distTotal.setText("La Distancia Total entre "+a+" y "+b+" es de 0 Km");	
+				}else
+				{
+					String ciud=Integer.toString(distTot);
+					distTotal.setText("La Distancia Total entre "+a+" y "+b+" es de "+ciud+" Km");	
+				}
 			}
 		});
 
